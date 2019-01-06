@@ -1,15 +1,16 @@
 @extends('layout')
+
 @section('content')
 <div class="row">
                     <div class="col-md-12">
                         <div class="panel">
-                            <div class="panel-heading">Urgencias</div>
+                            <!-- <div class="panel-heading">Urgencias</div> -->
                             <div class="table-responsive">
                                 <table class="table table-hover manage-u-table">
                                     <thead>
                                         
                                         <tr>
-                                            <th width="70" class="text-center">#</th>
+                                            <th width="70" class="text-center">ESTATUS</th>
                                             <th>NOMBRE</th>
                                             <th>OCCUPATION</th>
                                             <th>EMAIL</th>
