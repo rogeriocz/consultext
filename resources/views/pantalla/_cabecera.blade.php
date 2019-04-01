@@ -17,6 +17,19 @@
                 </div>
                 <!-- /Logo -->
                 <!-- Search input and Toggle icon -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h5 class="text-muted"> Hospital </h5>
+                        </div>
+                        <div class="col-sm-2">
+                            <h5 class="text-muted"> Regional </h5>
+                        </div>
+                        <div class="col-sm-2">
+                            <h5 class="text-muted"> Minatitlan </h5>
+                        </div>
+                    </div>
+                </div>
                 
             </div>
             <!-- /.navbar-header -->

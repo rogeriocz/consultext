@@ -79,7 +79,7 @@ and ders_empresa='"&FICOEM::EMPRESA&"'" */
 			return view('pantalla.sala', compact('datos')); */
 
 
-			$datos = DB::connection('oracle')
+			/* $datos = DB::connection('oracle')
 		->table('hos_consext_view')
 		->join('HOS_DERECHOHAB', 'hos_consext_view.DERC_FICHA','=','HOS_DERECHOHAB.DERC_FICHA')
 		->select('hos_consext_view.DERC_FICHA',
@@ -89,11 +89,18 @@ and ders_empresa='"&FICOEM::EMPRESA&"'" */
 		'HOS_DERECHOHAB.DERC_APMATERNO',
 		'hos_consext_view.cond_fechcon',
 		'hos_consext_view.MEDC_FICHA',
-		'hos_consext_view.conn_hrcon' )
+		'hos_consext_view.conn_hrcon' ) */
 			//->whereIn('hos_citas.citd_fechcita', ['2019-01-03', '2019-01-04'])
-			->where('hos_consext_view.cond_fechcon', '=', '2019-01-04')
-			->paginate(10);
+			/* ->where('hos_consext_view.cond_fechcon', '=', '2019-03-12')
+			->paginate(10); */
 			//dd($datos);
+
+			$datos = DB::connection('oracle')
+			->table('TRIAGE')
+			->select('TRIAGE.FICHA', 'TRIAGE.NOMBRE_COMPLETO', 'TRIAGE.NUM_FAM', 'TRIAGE.FECHA_CREACION')
+			->orderby('TRIAGE.FECHA_CREACION', 'DES')
+			->paginate(5);
+				//dd($datos);
 			return view('pantalla.sala', compact('datos'));
 
 		/*   $datos = DB::connection('oracle')
